@@ -31,6 +31,9 @@ dependencies:
   react-scripts:
     specifier: 5.0.1
     version: 5.0.1(@babel/plugin-syntax-flow@7.21.4)(@babel/plugin-transform-react-jsx@7.21.0)(eslint@8.37.0)(react@18.2.0)(typescript@5.0.3)
+  three:
+    specifier: ^0.151.2
+    version: 0.151.2
   web-vitals:
     specifier: ^2.1.4
     version: 2.1.4
