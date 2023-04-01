@@ -6,6 +6,7 @@ import Ground from "./components/Ground";
 import FirstPointView from "./components/FirstPointView";
 import Player from "./components/Player";
 import { Cubes } from "./components/Cubes";
+import Textures from "./components/Textures";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Sky sunPosition={[100, 100, 20]} />
                 <ambientLight intensity={0.5} />
                 <FirstPointView />
+                <Textures />
                 <Physics>
                     <Cubes />
                     <Player />
