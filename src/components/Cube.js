@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { UseStore } from "../hooks/UseStore";
 
 function Cube({ id, position, texture }) {
-    //!console.log(texture);
     const [removeCube] = UseStore((state) => [state.removeCube]);
 
     const [IsHovered, setIsHovered] = useState(false);
