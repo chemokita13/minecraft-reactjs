@@ -2,7 +2,7 @@ import create from "zustand";
 import { nanoid } from "nanoid";
 
 export const UseStore = create((set) => ({
-    texture: "dirt",
+    texture: "Dirt",
     cubes: [
         {
             id: nanoid(),
@@ -15,7 +15,18 @@ export const UseStore = create((set) => ({
             texture: "Log",
         },
     ],
-    addCube: () => {},
+    addCube: (x, y, z) => {
+        set((state) => ({
+            cubes: [
+                ...state.cubes,
+                {
+                    id: nanoid(),
+                    position: [x, y, z],
+                    texture: state.texture,
+                },
+            ],
+        }));
+    },
     removeCube: () => {},
     setTexture: (texture) => {},
     saveWorld: () => {},

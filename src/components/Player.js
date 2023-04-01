@@ -5,7 +5,7 @@ import { Vector3 } from "three";
 import { UseKeyboard } from "../hooks/UseKeyboard";
 
 const PLAYER_SPEED = 2;
-const PLAYER_JUMP = 2;
+const PLAYER_JUMP = 4;
 
 function Player() {
     const { moveBackward, moveForward, moveLeft, moveRight, jump } =
@@ -61,7 +61,7 @@ function Player() {
 
         api.velocity.set(direction.x, vel.current[1], direction.z);
 
-        if (jump && Math.abs(vel.current[1].toFixed(2)) < 0.05) {
+        if (jump && Math.abs(vel.current[1].toFixed(2)) == 0) {
             api.velocity.set(vel.current[0], PLAYER_JUMP, vel.current[2]);
         }
     });
