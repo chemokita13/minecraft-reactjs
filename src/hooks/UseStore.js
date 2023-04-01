@@ -32,7 +32,11 @@ export const UseStore = create((set) => ({
             cubes: state.cubes.filter((cube) => cube.id !== id),
         }));
     },
-    setTexture: (texture) => {},
+    setTexture: (texture) => {
+        set(() => {
+            return { texture };
+        });
+    },
     saveWorld: () => {},
     loadWorld: () => {},
     deleteWorld: () => {},

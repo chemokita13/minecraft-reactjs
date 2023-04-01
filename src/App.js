@@ -15,13 +15,13 @@ function App() {
                 <Sky sunPosition={[100, 100, 20]} />
                 <ambientLight intensity={0.5} />
                 <FirstPointView />
-                <Textures />
                 <Physics>
                     <Cubes />
                     <Player />
                     <Ground />
                 </Physics>
             </Canvas>
+            <Textures />
             <div className="pointer">+</div>
         </>
     );

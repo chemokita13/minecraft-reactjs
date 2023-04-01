@@ -32,6 +32,25 @@ body {
     transform: translate(-50%, -50%);
     text-shadow: 0 0 10px black;
     font-weight: 400;
-    z-index: 100;
+    z-index: 10;
     cursor: none;
+}
+
+.textures {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.textures img {
+    width: 75px;
+    image-rendering: pixelated;
+}
+
+.selected {
+    border: 2px solid red;
 }

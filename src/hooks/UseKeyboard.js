@@ -6,11 +6,11 @@ const ACTIONS_KEYBOARD_MAP = {
     KeyA: "moveLeft",
     KeyD: "moveRight",
     Space: "jump",
-    Digit1: "dirt",
-    Digit2: "glass",
-    Digit3: "grass",
-    Digit4: "log",
-    Digit5: "wood",
+    Digit1: "Dirt",
+    Digit2: "Glass",
+    Digit3: "Grass",
+    Digit4: "Log",
+    Digit5: "Wood",
 };
 
 export const UseKeyboard = () => {
@@ -20,11 +20,11 @@ export const UseKeyboard = () => {
         moveLeft: false,
         moveRight: false,
         jump: false,
-        dirt: false,
-        glass: false,
-        grass: false,
-        log: false,
-        wood: false,
+        Dirt: false,
+        Glass: false,
+        Grass: false,
+        Log: false,
+        Wood: false,
     });
 
     useEffect(() => {
