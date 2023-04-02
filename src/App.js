@@ -6,8 +6,16 @@ import FirstPointView from "./components/FirstPointView";
 import Player from "./components/Player";
 import { Cubes } from "./components/Cubes";
 import Textures from "./components/Textures";
+import { useEffect } from "react";
 
 function App() {
+    useEffect(
+        () =>
+            alert(
+                "Use your mouse to move the camera. Use click to place a cube. Use ALT + click to delete a cube. Select the texture whith the keys 1, 2, 3, 4, 5."
+            ),
+        []
+    );
     return (
         <>
             <Canvas>
