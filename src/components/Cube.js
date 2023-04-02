@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import { UseStore } from "../hooks/UseStore";
 
 function Cube({ id, position, texture }) {
-    const [removeCube] = UseStore((state) => [state.removeCube]);
+    const [removeCube, addCube] = UseStore((state) => [
+        state.removeCube,
+        state.addCube,
+    ]);
 
     const [IsHovered, setIsHovered] = useState(false);
 
@@ -14,6 +17,14 @@ function Cube({ id, position, texture }) {
     }));
 
     const activeTexture = textures[texture + "Texture"];
+
+    const handleClickCube = (e) => {
+        e.stopPropagation();
+        const [x, y, z] = Object.values(e.point).map((element) =>
+            Math.ceil(element)
+        );
+        addCube(x, y, z);
+    };
 
     return (
         <mesh
@@ -34,6 +45,7 @@ function Cube({ id, position, texture }) {
                     removeCube(id);
                 } else {
                     // put cube
+                    handleClickCube(e);
                 }
             }}
         >
